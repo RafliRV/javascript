@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: cyan;
+            }
+        </style>
+        <script>
+            function output(){
+                var nim = document.mahasiswa.nim.value;
+                var nama = document.mahasiswa.nama.value;
+                var jk = document.mahasiswa.jk.value;
+                var agama = document.mahasiswa.agama.value;
+                var status = document.mahasiswa.status.value;
+                var jurusan = document.mahasiswa.jurusan.value;
+                var komentar = document.mahasiswa.komentar.value;
+
+                document.mahasiswa.onim.value = nim;
+                document.mahasiswa.onama.value = nama;
+                document.mahasiswa.ojk.value = jk;
+                document.mahasiswa.oagama.value = agama;
+                document.mahasiswa.ostatus.value = status;
+                document.mahasiswa.ojurusan.value = jurusan;
+                document.mahasiswa.okomentar.value = komentar;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h3>Data Mahasiswa</h3>
+            <h3>Universitas Komputer Indonesia</h3>
+            <hr width="50%" color="Black">
+        </center>
+        <pre style="margin-left: -7rem;margin-top: -1rem;">
+            <form name="mahasiswa">
+                NIM                 :<input type="number" name="nim">
+                Nama Mahasiswa      :<input type="text" name="nama">
+                Jenis Kelamin       :<input type="radio" name="jk" value="Perempuan">Perempuan <input type="radio" name="jk" value="Laki-laki">Laki-laki
+                Agama               :<select name="agama">
+                    <option value="Islam">Islam</option>
+                    <option value="Katolik">Katolik</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Buddha">Buddha</option>
+                    <option value="Konghuchu">Konghuchu</option>
+                </select>
+                Status              :<input type="radio" name="status" value="Kawin">Kawin <input type="radio" name="status" value="Belum Kawin">Belum Kawin 
+                Jurusan di UNIKOM   :<select name="jurusan">
+                    <option value="Teknik Informatika">Teknik Informatika</option>
+                    <option value="Teknik Komputer">Teknik Komputer</option>
+                </select>
+                Komentar            :<textarea name="komentar"></textarea>
+
+                <input type="button" value="Kirim" onclick="output()"> <input type="reset" value="Ulang">
+                <h3 style="margin-left: 7rem;text-decoration: underline;">Data Mahasiswa Universitas Komputer Indonesia</h3>
+                NIM                 :<input type="number" name="onim" readonly>
+                Nama Mahasiswa      :<input type="text" name="onama" readonly>
+                Jenis Kelamin       :<input type="text" name="ojk" readonly>
+                Agama               :<input type="text" name="oagama" readonly>
+                Status              :<input type="text" name="ostatus" readonly>
+                Jurusan di UNIKOM   :<input type="text" name="ojurusan" readonly>
+                Komentar            :<textarea name="okomentar" readonly></textarea>
+            </form>
+        </pre>
+    </body>
+</html>

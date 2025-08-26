@@ -1,0 +1,66 @@
+<html>
+    <body>
+        <h1>Kalkulator Sederhana</h1>
+        <form name="kal">
+            <pre>
+            Bilangan 1: <input type="number" name="angka1"><br>
+            Bilangan 2: <input type="number" name="angka2"><br>
+            </pre>
+            <input type="button" value="Tambah" onclick="tambah()">
+            <input type="button" value="Kurang" onclick="kurang()">
+            <input type="button" value="Kali" onclick="kali()">
+            <input type="button" value="bagi" onclick="bagi()">
+            <input type="reset" value="Reset">
+        </form>
+        <script>
+            function input(){
+                var angka1 = parseFloat(document.kal.angka1.value);
+                var angka2 = parseFloat(document.kal.angka2.value);
+                return [angka1,angka2];
+            }
+            function tambah(){
+                let [angka1,angka2] = input();
+                var hasil = angka1 + angka2;
+                if(isNaN(angka1) || isNaN(angka2)){
+                    alert('Harus Berupa Angka')
+                }
+                else{
+                    alert('Hasil Penjumlahan adalah ' + hasil)
+                }
+            }
+            function kurang(){
+                let [angka1,angka2] = input();
+                var hasil = angka1 - angka2;
+                if(isNaN(angka1) || isNaN(angka2)){
+                    alert('Harus Berupa Angka')
+                }
+                else{
+                    alert('Hasil Pengurangan adalah ' + hasil)
+                }
+            }
+            function kali(){
+                let [angka1,angka2] = input();
+                var hasil = angka1 * angka2;
+                if(isNaN(angka1) || isNaN(angka2)){
+                    alert('Harus Berupa Angka')
+                }
+                else{
+                    alert('Hasil Perkalian adalah ' + hasil)
+                }
+            }
+            function bagi(){
+                let [angka1,angka2] = input();
+                var hasil = angka1 / angka2;
+                if(angka2 == 0){
+                    alert('Tidak bisa dibagi dengan 0')
+                }
+                else if(isNaN(angka1) || isNaN(angka2)){
+                    alert('Harus Berupa Angka')
+                }
+                else{
+                    alert('Hasil Pembagian adalah ' + hasil)
+                }
+            }
+        </script>
+    </body>
+</html>
